@@ -37,17 +37,20 @@ El flujo operativo está compuesto por los siguientes archivos clave:
 
 ```mermaid
 graph TD
+graph TD
     A[Datos de Mercado] --> B(1. Motor Cuantitativo en Python)
-    B -->|Cálculos de VaR, ES y Sensibilidades| C[2. Salida Estructurada en JSON]
-    C -->|Exportación de métricas crudas| D(3. Ingeniería de Prompts)
-    D -->|Inyección de reglas de negocio .txt| E(4. Capa de Inteligencia Artificial)
-    E --> F[Reporte Ejecutivo de Riesgos]
+    B --> C{Cálculos de VaR, ES y Sensibilidades}
+    C --> D[2. Salida Estructurada en JSON]
+    D --> E{Exportación de métricas crudas}
+    E --> F(3. Ingeniería de Prompts)
+    F --> G{Inyección de reglas de negocio .txt}
+    G --> H(4. Capa de Inteligencia Artificial)
+    H --> I[Reporte Ejecutivo de Riesgos]
 
     style B fill:#238636,stroke:#333,stroke-width:1px,color:#fff
-    style E fill:#1f6feb,stroke:#333,stroke-width:1px,color:#fff
-    style F fill:#8957e5,stroke:#333,stroke-width:1px,color:#fff
+    style H fill:#1f6feb,stroke:#333,stroke-width:1px,color:#fff
+    style I fill:#8957e5,stroke:#333,stroke-width:1px,color:#fff
 
----
 
 ## 📋 Matriz de Capacidades
 
