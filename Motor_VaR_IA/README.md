@@ -35,21 +35,22 @@ El flujo operativo está compuesto por los siguientes archivos clave:
 
 ## 🔄 Flujo de Trabajo (Pipeline)
 
-```mermaid
-graph TD
-graph TD
-    A[Datos de Mercado] --> B(1. Motor Cuantitativo en Python)
-    B --> C{Cálculos de VaR, ES y Sensibilidades}
-    C --> D[2. Salida Estructurada en JSON]
-    D --> E{Exportación de métricas crudas}
-    E --> F(3. Ingeniería de Prompts)
-    F --> G{Inyección de reglas de negocio .txt}
-    G --> H(4. Capa de Inteligencia Artificial)
-    H --> I[Reporte Ejecutivo de Riesgos]
-
-    style B fill:#238636,stroke:#333,stroke-width:1px,color:#fff
-    style H fill:#1f6feb,stroke:#333,stroke-width:1px,color:#fff
-    style I fill:#8957e5,stroke:#333,stroke-width:1px,color:#fff
+[📊 Datos de Mercado]
+       │
+       ▼
+[🐍 1. Motor Cuantitativo en Python] ──► Cálculos de VaR, ES y Sensibilidades
+       │
+       ▼
+[📂 2. Salida Estructurada en JSON]  ──► Exportación de métricas crudas
+       │
+       ▼
+[✍️ 3. Ingeniería de Prompts]        ──► Inyección de reglas de negocio (.txt)
+       │
+       ▼
+[🧠 4. Capa de Inteligencia Artificial] ──► Procesamiento y contextualización por LLM
+       │
+       ▼
+[📋 Reporte Ejecutivo de Riesgos]
 
 
 ## 📋 Matriz de Capacidades
