@@ -1,0 +1,180 @@
+{
+  "objetivo": "Interpretar resultados de VaR y stress testing para un comité de riesgos.",
+  "advertencia": "Demo educativa. No es recomendación de inversión ni modelo regulatorio oficial.",
+  "portafolio": [
+    {
+      "Ticker": "SPY",
+      "Peso": 0.4,
+      "Monto_USD": 400000.0
+    },
+    {
+      "Ticker": "NVDA",
+      "Peso": 0.25,
+      "Monto_USD": 250000.0
+    },
+    {
+      "Ticker": "MSFT",
+      "Peso": 0.2,
+      "Monto_USD": 200000.0
+    },
+    {
+      "Ticker": "AAPL",
+      "Peso": 0.15,
+      "Monto_USD": 150000.0
+    }
+  ],
+  "periodo_precios": {
+    "inicio": "2022-01-03",
+    "fin": "2026-06-02",
+    "observaciones": 1107
+  },
+  "metricas_portafolio": {
+    "retorno_diario_medio": 0.0009283755578983936,
+    "volatilidad_diaria": 0.016603458772188235,
+    "volatilidad_anualizada": 0.2635717368883434
+  },
+  "resultados_var_es": [
+    {
+      "Método": "Histórico",
+      "Confianza": "95%",
+      "Horizonte_días": 1,
+      "VaR_USD": 26920.166639750627,
+      "Expected_Shortfall_USD": 36672.305028716895,
+      "VaR_%_Portafolio": 0.026920166639750626,
+      "ES_%_Portafolio": 0.03667230502871689
+    },
+    {
+      "Método": "Histórico",
+      "Confianza": "95%",
+      "Horizonte_días": 10,
+      "VaR_USD": 85129.04157289349,
+      "Expected_Shortfall_USD": 115968.01093919195,
+      "VaR_%_Portafolio": 0.08512904157289349,
+      "ES_%_Portafolio": 0.11596801093919196
+    },
+    {
+      "Método": "Histórico",
+      "Confianza": "99%",
+      "Horizonte_días": 1,
+      "VaR_USD": 42820.75835452946,
+      "Expected_Shortfall_USD": 51361.01341304827,
+      "VaR_%_Portafolio": 0.04282075835452946,
+      "ES_%_Portafolio": 0.051361013413048266
+    },
+    {
+      "Método": "Histórico",
+      "Confianza": "99%",
+      "Horizonte_días": 10,
+      "VaR_USD": 135411.12753599702,
+      "Expected_Shortfall_USD": 162417.78531969103,
+      "VaR_%_Portafolio": 0.13541112753599702,
+      "ES_%_Portafolio": 0.16241778531969103
+    },
+    {
+      "Método": "Paramétrico Normal",
+      "Confianza": "95%",
+      "Horizonte_días": 1,
+      "VaR_USD": 26381.88382347466,
+      "Expected_Shortfall_USD": 33319.79150041579,
+      "VaR_%_Portafolio": 0.026381883823474662,
+      "ES_%_Portafolio": 0.033319791500415794
+    },
+    {
+      "Método": "Paramétrico Normal",
+      "Confianza": "95%",
+      "Horizonte_días": 10,
+      "VaR_USD": 77078.86755613599,
+      "Expected_Shortfall_USD": 99018.45801123764,
+      "VaR_%_Portafolio": 0.07707886755613598,
+      "ES_%_Portafolio": 0.09901845801123764
+    },
+    {
+      "Método": "Paramétrico Normal",
+      "Confianza": "99%",
+      "Horizonte_días": 1,
+      "VaR_USD": 37697.04545850645,
+      "Expected_Shortfall_USD": 43323.398868663,
+      "VaR_%_Portafolio": 0.037697045458506453,
+      "ES_%_Portafolio": 0.043323398868662995
+    },
+    {
+      "Método": "Paramétrico Normal",
+      "Confianza": "99%",
+      "Horizonte_días": 10,
+      "VaR_USD": 112860.55041579135,
+      "Expected_Shortfall_USD": 130652.64211294158,
+      "VaR_%_Portafolio": 0.11286055041579135,
+      "ES_%_Portafolio": 0.13065264211294159
+    }
+  ],
+  "stress_tests": [
+    {
+      "Escenario": "Caída leve (-3%)",
+      "Shock_portafolio": -0.03,
+      "Pérdida_USD": 30000.0,
+      "Valor_post_stress_USD": 970000.0
+    },
+    {
+      "Escenario": "Caída moderada (-7%)",
+      "Shock_portafolio": -0.07,
+      "Pérdida_USD": 70000.0,
+      "Valor_post_stress_USD": 929999.9999999999
+    },
+    {
+      "Escenario": "Caída severa (-12%)",
+      "Shock_portafolio": -0.12,
+      "Pérdida_USD": 120000.0,
+      "Valor_post_stress_USD": 880000.0
+    },
+    {
+      "Escenario": "Caída extrema (-20%)",
+      "Shock_portafolio": -0.2,
+      "Pérdida_USD": 200000.0,
+      "Valor_post_stress_USD": 800000.0
+    }
+  ],
+  "correlacion": {
+    "AAPL": {
+      "AAPL": 1.0,
+      "MSFT": 0.5685,
+      "NVDA": 0.4995,
+      "SPY": 0.7566
+    },
+    "MSFT": {
+      "AAPL": 0.5685,
+      "MSFT": 1.0,
+      "NVDA": 0.6033,
+      "SPY": 0.7222
+    },
+    "NVDA": {
+      "AAPL": 0.4995,
+      "MSFT": 0.6033,
+      "NVDA": 1.0,
+      "SPY": 0.713
+    },
+    "SPY": {
+      "AAPL": 0.7566,
+      "MSFT": 0.7222,
+      "NVDA": 0.713,
+      "SPY": 1.0
+    }
+  },
+  "instruccion_para_gpt": {
+    "rol": "Actúa como copiloto de escenarios de riesgo financiero.",
+    "tareas": [
+      "Explicar los resultados en lenguaje ejecutivo.",
+      "Identificar principales fuentes de riesgo del portafolio.",
+      "Sugerir escenarios narrativos que podrían no estar capturados por el VaR.",
+      "Proponer señales tempranas a monitorear.",
+      "Preparar preguntas para un comité de riesgos.",
+      "Indicar limitaciones del VaR y del análisis histórico.",
+      "Sugerir qué recalcular o validar en Python."
+    ],
+    "restricciones": [
+      "No recomendar comprar o vender activos.",
+      "No presentar escenarios como predicciones.",
+      "No reemplazar juicio experto ni validación independiente.",
+      "Separar resultados cuantitativos de interpretación cualitativa."
+    ]
+  }
+}
