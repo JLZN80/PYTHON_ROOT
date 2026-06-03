@@ -37,14 +37,19 @@ El flujo operativo está compuesto por los siguientes archivos clave:
 
 * **📊 1. Datos de Mercado**
   * *Acción:* Ingesta de precios y retornos históricos de activos.
+    
 * **🐍 2. Motor Cuantitativo en Python**
   * *Acción:* Cálculo matemático de VaR, Expected Shortfall y simulaciones de estrés.
+    
 * **📂 3. Salida Estructurada en JSON**
   * *Acción:* Exportación de las métricas crudas generadas por el motor.
+    
 * **✍️ 4. Ingeniería de Prompts**
   * *Acción:* Inyección de reglas de negocio y directrices desde el archivo `.txt`.
+    
 * **🧠 5. Capa de Inteligencia Artificial**
   * *Acción:* Procesamiento, análisis y contextualización de los resultados mediante el LLM.
+    
 * **📋 6. Reporte Ejecutivo de Riesgos**
   * *Resultado:* Diagnóstico financiero final listo para la toma de decisiones.
 
