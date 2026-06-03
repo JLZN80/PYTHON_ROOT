@@ -35,7 +35,6 @@ El flujo operativo está compuesto por los siguientes archivos clave:
 
 ## 🔄 Flujo de Trabajo (Pipeline)
 
-```mermaid
 graph TD
     A[Datos de Mercado] --> B(1. Motor Cuantitativo en Python)
     B -->|Cálculos de VaR, ES y Sensibilidades| C[2. Salida Estructurada en JSON]
